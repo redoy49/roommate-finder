@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
-import Login from "../pages/Login";
 import Register from "../pages/Register";
 // import AddPost from "../pages/AddPost";
 // import UpdatePost from "../pages/UpdatePost";
@@ -9,6 +8,7 @@ import Register from "../pages/Register";
 import NotFound from "../pages/NotFound";
 import MyListings from "../pages/MyListings";
 import BrowseListings from "../pages/BrowseListings";
+import Login from "../pages/Login";
 // import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
           // <PrivateRoute>
           //   <MyListings />
           // </PrivateRoute>
-            <MyListings />
+          <MyListings />
         ),
       },
       {

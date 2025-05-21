@@ -1,15 +1,16 @@
-import React from "react";
-import { NavLink } from "react-router";
-// import { AuthContext } from "../provider/AuthProvider";
+import React, { useContext } from "react";
+import { NavLink, useNavigate } from "react-router";
+import { AuthContext } from "../provider/AuthContext";
 
 const Navbar = () => {
-  // const navigate = useNavigate();
-  // const { user, handleLogout } = useContext(AuthContext);
-  // const logOut = () => {
-  //   handleLogout().then(() => {
-  //     navigate("/login");
-  //   });
-  // };
+  const navigate = useNavigate();
+  const { user, logout } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logout().then(() => {
+      navigate("/login");
+    });
+  };
 
   const links = (
     <>
@@ -61,7 +62,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      {/* <div className="navbar-end">
+      <div className="navbar-end">
         {user ? (
           <div className="flex items-center gap-4">
             <img
@@ -72,7 +73,7 @@ const Navbar = () => {
             />
             <button
               className="btn bg-white text-base text-slate-600 md:px-6 md:py-5 rounded-full"
-              onClick={logOut}
+              onClick={handleLogout}
             >
               Logout
             </button>
@@ -93,7 +94,7 @@ const Navbar = () => {
             </NavLink>
           </div>
         )}
-      </div> */}
+      </div>
     </div>
   );
 };
