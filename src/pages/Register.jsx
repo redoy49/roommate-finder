@@ -50,7 +50,7 @@ const Register = () => {
         toast.success("User Register successful!");
 
         manageProfile(name, photoUrl).then(() => {
-          // navigate(`${location.state ? location.state : "/"}`);
+          navigate(`${location.state ? location.state : "/"}`);
         });
       })
 

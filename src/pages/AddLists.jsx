@@ -8,6 +8,20 @@ const AddLists = () => {
     e.preventDefault();
     const form = e.target;
 
+    // const postData = {
+    //   title: form.title.value,
+    //   location: form.location.value,
+    //   rent: form.rent.value,
+    //   roomType: form.roomType.value,
+    //   lifestyle: form.lifestyle.value,
+    //   description: form.description.value,
+    //   contact: form.contact.value,
+    //   availability: form.availability.value,
+    //   userEmail: user.email,
+    //   userName: user.displayName,
+    // };
+    // console.log(postData);
+
     const formData = new FormData(form);
     const newLists = Object.fromEntries(formData.entries());
     console.log(newLists);
@@ -144,7 +158,7 @@ const AddLists = () => {
             type="submit"
             className="w-full py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-500"
           >
-            Add List
+            Add Post
             {/* {loading ? "Adding..." : "Add"} */}
           </button>
         </form>

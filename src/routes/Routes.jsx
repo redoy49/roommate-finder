@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { 
-        path: "/", 
+        index: true,
         loader: () => fetch('http://localhost:3000/lists'),
         element: <Home /> 
       },
