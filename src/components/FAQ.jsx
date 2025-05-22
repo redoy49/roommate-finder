@@ -9,10 +9,10 @@ const FAQ = () => {
       <div className="collapse collapse-plus bg-base-100 border border-base-300">
         <input type="radio" name="my-accordion-3" defaultChecked />
         <div className="collapse-title font-semibold">
-          1. How Does The MeetYourClass Roommate Finder Work?
+          1. How Does The Roommate Finder Work?
         </div>
         <div className="collapse-content text-sm">
-          MeetYourClass has a powerful search tool that makes finding your ideal
+          Roommate has a powerful search tool that makes finding your ideal
           roommate super easy! It's like a personalized search engine just for
           roommates—filter by what's important to you and connect with the right
           match in no time.
@@ -22,10 +22,10 @@ const FAQ = () => {
       <div className="collapse collapse-plus bg-base-100 border border-base-300">
         <input type="radio" name="my-accordion-3" />
         <div className="collapse-title font-semibold">
-          2. Is The MeetYourClass Roommate Finder Free to Use?
+          2. Is The Roommate Finder Free to Use?
         </div>
         <div className="collapse-content text-sm">
-          Yes, completely free! The MeetYourClass Roommate Finder lets you
+          Yes, completely free! The Roommate Finder lets you
           search and message as much as you want without any limits.
         </div>
       </div>
@@ -75,7 +75,7 @@ const FAQ = () => {
           5. What Websites To Find Roommates?
         </div>
         <div className="collapse-content text-sm">
-          There are lots of places online to find roommates, but MeetYourClass
+          There are lots of places online to find roommates, but Roommate
           is one of the fastest-growing, with over 400,000 students from 1,500+
           colleges. It's a great place to start your search!
         </div>

@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const FeatureCard = ({ list }) => {
-  const { title, location, rent, roomType } = list;
-  console.log(list);
+  const {_id, title, location, rent, roomType } = list;
   return (
     <div className="card border border-slate-300">
       <div className="card-body text-base">
@@ -18,7 +17,7 @@ const FeatureCard = ({ list }) => {
           <strong>Room Type:</strong> {roomType}
         </p>
         <div className="card-actions mt-4">
-          <Link className="w-full" to={`/details/${list._id}`}>
+          <Link className="w-full" to={`/card-details/${_id}`}>
             <button className="btn w-full text-base h-12 bg-violet-500 text-white">
               See More
             </button>

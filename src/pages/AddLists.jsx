@@ -33,6 +33,7 @@ const AddLists = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         if (data.insertedId) {
           console.log("Success:", data);
           // Swal.fire({
@@ -159,7 +160,6 @@ const AddLists = () => {
             className="w-full py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-500"
           >
             Add Post
-            {/* {loading ? "Adding..." : "Add"} */}
           </button>
         </form>
       </div>

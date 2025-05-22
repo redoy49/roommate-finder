@@ -12,6 +12,8 @@ import Login from "../pages/Login";
 import BrowseLists from "../pages/BrowseLists";
 import MyLists from "../pages/MyLists";
 import AddLists from "../pages/AddLists";
+import CardDetails from "../pages/CardDetails";
+import PrivateRoute from "./PrivateRoute";
 // import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -20,31 +22,32 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     errorElement: <NotFound />,
     children: [
-      { 
+      {
         index: true,
-        loader: () => fetch('http://localhost:3000/lists'),
-        element: <Home /> 
+        loader: () => fetch("http://localhost:3000/lists/feature"),
+        element: <Home />,
       },
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
       {
         path: "/add-lists",
         element: (
-          // <PrivateRoute>
-          <AddLists />
+          <PrivateRoute>
+            <AddLists />
+          </PrivateRoute>
         ),
       },
       {
         path: "/my-lists",
         element: (
-          // <PrivateRoute>
-          //   <MyListings />
-          // </PrivateRoute>
-          <MyLists />
+          <PrivateRoute>
+            <MyLists />
+          </PrivateRoute>
         ),
       },
       {
         path: "/browse-lists",
+        loader: () => fetch("http://localhost:3000/lists"),
         element: <BrowseLists />,
       },
       // {
@@ -55,14 +58,16 @@ const router = createBrowserRouter([
       //     </PrivateRoute>
       //   ),
       // },
-      // {
-      //   path: "/details/:id",
-      //   element: (
-      //     <PrivateRoute>
-      //       <Details />
-      //     </PrivateRoute>
-      //   ),
-      // },
+      {
+        path: "/card-details/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/lists/${params.id}`),
+        element: (
+          <PrivateRoute>
+            <CardDetails />
+          </PrivateRoute>
+        ),
+      },
     ],
   },
 ]);

@@ -1,12 +1,40 @@
-FAQ: https://www.meetyourclass.com/roommates
-List Add: https://www.roomies.ca/
-Find roommate for rent section: https://roommatch.com/
-6 start
+# Project Name : RoomMate
+RoomMate is a platform that helps individuals find compatible roommates based on location, budget, lifestyle preferences, and interests. Users can create profiles, search for roommates, and connect via chat.
 
-Add to find roommate - form dekhate hobe roommate khujar jonno post korte parbe
+## Live Link : [Live URL](https://subscription-box-df504.web.app)
 
-feacture roommate post section- db theke ene 6 ta dekhabo ja add rrommate theke add koresi
-browse listing
+## Purpose
+Find potential roommates based on location, budget, lifestyle preferences, and other filters. Communicate safely through protected user accounts and private listings. Ensure privacy and control by letting users update or delete their own posts.
 
-home a 6 ta , browselisting a sob
-send form data in db
+## Key Features
+- Navbar with Company name, Home, Profile including active route.
+- When user is logged in show the user's image and a logout button.  and when logout it show login and register.
+- Main Section will show different pages based on routes like Home, Roommate List, Roommate details, Add Roommate
+- Navbar and Footer are showing on all pages without an Error/404 page. 
+- Fully Responsive for Mobile, Tablet, and Desktop
+- Success and Error message by Toast Notification 
+- Show banner slider in header using Swiper js
+- Dynamic title in every page 
+- Protected route only logged in user show 
+- Firebase Authentication (Email/Password + Google)
+- Create a `.env` file to store Firebase credentials:
+
+## NPM Packages Used
+- `react-router` - For building the user interface
+- `react-toastify` - For HTTP requests
+- `react-icons` - For client-side routing
+- `swiper Js` - For managing environment variables
+- `firebase` - For authentication and hosting
+- `Tailwind CSS` - For utility-first CSS styling
+- `DaisyUI` - For Navbar , Footer
+- `React` - for building user interfaces
+- `MongoDB` - stores data in JSON-like documents
+
+My Listing
+Private Route
+Loading
+Tooltip
+Success Error Toast
+Update Page
+Delete List,
+Dark mode
