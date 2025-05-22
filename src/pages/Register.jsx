@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { AuthContext } from "../provider/AuthContext";
 
 const Register = () => {
-  const { createUser, googleLogin } = useContext(AuthContext);
+  const { createUser, googleLogin, manageProfile } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
@@ -23,10 +23,10 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const name = e.target.fullname.value;
+    const name = e.target.fullname.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // const photoUrl = e.target.photourl.value;
+    const photoUrl = e.target.photourl.value;
 
     if (password.length < 6) {
       toast.error("Password must be at least 6 digit.");
@@ -49,9 +49,9 @@ const Register = () => {
         console.log(user);
         toast.success("User Register successful!");
 
-        // manageProfile(name, photoUrl).then(() => {
-        //   navigate(`${location.state ? location.state : "/"}`);
-        // });
+        manageProfile(name, photoUrl).then(() => {
+          // navigate(`${location.state ? location.state : "/"}`);
+        });
       })
 
       .catch((error) => {

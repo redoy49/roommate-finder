@@ -6,9 +6,12 @@ import Register from "../pages/Register";
 // import UpdatePost from "../pages/UpdatePost";
 // import Details from "../pages/Details";
 import NotFound from "../pages/NotFound";
-import MyListings from "../pages/MyListings";
-import BrowseListings from "../pages/BrowseListings";
+import MyListings from "../pages/MyLists";
+import BrowseListings from "../pages/BrowseLists";
 import Login from "../pages/Login";
+import BrowseLists from "../pages/BrowseLists";
+import MyLists from "../pages/MyLists";
+import AddLists from "../pages/AddLists";
 // import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -17,29 +20,32 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     errorElement: <NotFound />,
     children: [
-      { path: "/", element: <Home /> },
+      { 
+        path: "/", 
+        loader: () => fetch('http://localhost:3000/lists'),
+        element: <Home /> 
+      },
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
-      // {
-      //   path: "/add-post",
-      //   element: (
-      //     <PrivateRoute>
-      //       <AddPost />
-      //     </PrivateRoute>
-      //   ),
-      // },
       {
-        path: "/my-listings",
+        path: "/add-lists",
+        element: (
+          // <PrivateRoute>
+          <AddLists />
+        ),
+      },
+      {
+        path: "/my-lists",
         element: (
           // <PrivateRoute>
           //   <MyListings />
           // </PrivateRoute>
-          <MyListings />
+          <MyLists />
         ),
       },
       {
-        path: "/browse",
-        element: <BrowseListings />,
+        path: "/browse-lists",
+        element: <BrowseLists />,
       },
       // {
       //   path: "/update/:id",

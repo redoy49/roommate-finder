@@ -9,60 +9,75 @@ const FAQ = () => {
       <div className="collapse collapse-plus bg-base-100 border border-base-300">
         <input type="radio" name="my-accordion-3" defaultChecked />
         <div className="collapse-title font-semibold">
-          1. What’s included in each subscription box?
+          1. How Does The MeetYourClass Roommate Finder Work?
         </div>
         <div className="collapse-content text-sm">
-          Each box contains a curated selection of fresh, organic vegetables
-          tailored to the box’s theme. For example, the Green Essentials Box
-          includes leafy greens and herbs, while the Family Feast Box offers a
-          variety of 8+ vegetables perfect for family meals.
+          MeetYourClass has a powerful search tool that makes finding your ideal
+          roommate super easy! It's like a personalized search engine just for
+          roommates—filter by what's important to you and connect with the right
+          match in no time.
         </div>
       </div>
 
       <div className="collapse collapse-plus bg-base-100 border border-base-300">
         <input type="radio" name="my-accordion-3" />
         <div className="collapse-title font-semibold">
-          2. How often will I receive my box?
+          2. Is The MeetYourClass Roommate Finder Free to Use?
         </div>
         <div className="collapse-content text-sm">
-          All subscriptions are delivered monthly. You’ll receive a fresh,
-          handpicked box of vegetables at your doorstep once a month, on your
-          selected delivery date.
+          Yes, completely free! The MeetYourClass Roommate Finder lets you
+          search and message as much as you want without any limits.
         </div>
       </div>
 
       <div className="collapse collapse-plus bg-base-100 border border-base-300">
         <input type="radio" name="my-accordion-3" />
         <div className="collapse-title font-semibold">
-          3. Can I pause or cancel my subscription anytime?
+          3. What Should I Look For In a College Roommate?
         </div>
         <div className="collapse-content text-sm">
-          Yes! You can pause, skip a month, or cancel your subscription at any
-          time through your account settings—no hidden fees or commitments.
+          When it comes to picking a college roommate, finding someone you can
+          live well with is key. Look for someone who has a similar schedule,
+          goals, and social habits. It's better to have a good living situation
+          than to risk losing a friendship over roommate issues. For more tips
+          on what makes a great roommate, check out our post in our blog!
         </div>
       </div>
 
       <div className="collapse collapse-plus bg-base-100 border border-base-300">
         <input type="radio" name="my-accordion-3" />
         <div className="collapse-title font-semibold">
-          4. Are the vegetables organic and locally sourced?
+          4. What Questions Should I Ask Potential College Roommates?
         </div>
         <div className="collapse-content text-sm">
-          Absolutely. We prioritize organic and locally grown produce, working
-          directly with trusted farms to ensure top quality and sustainability
-          in every box.
+          Asking the right questions helps you get beyond the basics and figure
+          out if you'll make a good team as roommates. We've put together a list
+          of the top 50 questions to help you get started—check it out!
         </div>
       </div>
 
       <div className="collapse collapse-plus bg-base-100 border border-base-300">
         <input type="radio" name="my-accordion-3" />
         <div className="collapse-title font-semibold">
-          5. What if I have dietary restrictions or allergies?
+          5. How To Find Roommates For College?
         </div>
         <div className="collapse-content text-sm">
-          While we don’t currently offer customized boxes, you can view full box
-          contents before your delivery and skip any month if it doesn’t meet
-          your needs. We're working to add more flexible options soon!
+          Finding a roommate doesn't have to be stressful! There are plenty of
+          options out there, like Facebook groups, Instagram pages, and the
+          MeetYourClass Roommate Finder, which makes it easy to find the right
+          person for you.
+        </div>
+      </div>
+
+      <div className="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div className="collapse-title font-semibold">
+          5. What Websites To Find Roommates?
+        </div>
+        <div className="collapse-content text-sm">
+          There are lots of places online to find roommates, but MeetYourClass
+          is one of the fastest-growing, with over 400,000 students from 1,500+
+          colleges. It's a great place to start your search!
         </div>
       </div>
     </div>
