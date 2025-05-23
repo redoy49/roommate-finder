@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthContext";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Navbar = () => {
       navigate("/login");
     });
   };
- 
+
   const links = (
     <>
       <li>
@@ -62,14 +63,18 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end z-10">
         {user ? (
           <div className="flex items-center gap-4">
             <img
               className="w-10 h-10 rounded-full object-cover"
               src={user?.photoURL}
               alt=""
-              title={user?.displayName}
+              id="my-anchor-element"
+            />
+            <Tooltip
+              anchorSelect="#my-anchor-element"
+              content={user.displayName}
             />
             <button
               className="btn bg-white text-base text-slate-600 md:px-6 md:py-5 rounded-full"
