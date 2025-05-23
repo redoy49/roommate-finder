@@ -15,5 +15,5 @@ const FeatureLists = ({ lists }) => {
     </section>
   );
 };
-
+ 
 export default FeatureLists;

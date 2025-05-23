@@ -31,10 +31,9 @@ Find potential roommates based on location, budget, lifestyle preferences, and o
 - `MongoDB` - stores data in JSON-like documents
 
 My Listing
-Private Route
-Loading
 Tooltip
 Success Error Toast
 Update Page
 Delete List,
 Dark mode
+google login photo

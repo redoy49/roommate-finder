@@ -2,20 +2,15 @@ import { createBrowserRouter } from "react-router";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import Register from "../pages/Register";
-// import AddPost from "../pages/AddPost";
 // import UpdatePost from "../pages/UpdatePost";
-// import Details from "../pages/Details";
 import NotFound from "../pages/NotFound";
-import MyListings from "../pages/MyLists";
-import BrowseListings from "../pages/BrowseLists";
 import Login from "../pages/Login";
 import BrowseLists from "../pages/BrowseLists";
 import MyLists from "../pages/MyLists";
 import AddLists from "../pages/AddLists";
 import CardDetails from "../pages/CardDetails";
 import PrivateRoute from "./PrivateRoute";
-// import PrivateRoute from "./PrivateRoute";
-
+ 
 const router = createBrowserRouter([
   {
     path: "/",
@@ -55,7 +50,7 @@ const router = createBrowserRouter([
       //   element: (
       //     <PrivateRoute>
       //       <UpdatePost />
-      //     </PrivateRoute>
+      //     </PrivateRoute> 
       //   ),
       // },
       {

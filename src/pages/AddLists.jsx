@@ -3,7 +3,7 @@ import { AuthContext } from "../provider/AuthContext";
 
 const AddLists = () => {
   const { user } = useContext(AuthContext);
-  console.log(user.email);
+
   const handleAddList = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -24,6 +24,7 @@ const AddLists = () => {
 
     const formData = new FormData(form);
     const newLists = Object.fromEntries(formData.entries());
+    newLists.email = user.email;
     console.log(newLists);
 
     fetch("http://localhost:3000/lists", {

@@ -27,5 +27,5 @@ const FeatureCard = ({ list }) => {
     </div>
   );
 };
-
+ 
 export default FeatureCard;

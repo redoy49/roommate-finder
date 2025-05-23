@@ -3,7 +3,6 @@ import { Link, useLoaderData } from "react-router";
 
 const BrowseLists = () => {
   const lists = useLoaderData();
-  console.log(lists);
 
   // const [posts, setPosts] = useState([]);
   // const [loading, setLoading] = useState(true);
@@ -34,7 +33,6 @@ const BrowseLists = () => {
       <table className="table table-xs">
         <thead>
           <tr>
-            <th>Availity</th>
             <th>Title</th>
             <th>Rent</th>
             <th>Room Type</th>
@@ -45,13 +43,12 @@ const BrowseLists = () => {
         <tbody>
           {lists.map((list) => (
             <tr key={list._id}>
-              <td>{list.availability}</td>
               <td>{list.title}</td>
               <td>{list.rent}</td>
               <td>{list.roomType}</td>
               <td>{list.location}</td>
               <td>
-                <Link to={`/details/${list._id}`}>
+                <Link to={`/card-details/${list._id}`}>
                   <button className="btn btn-sm">See More</button>
                 </Link>
               </td>
