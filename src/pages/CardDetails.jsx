@@ -17,7 +17,7 @@ const Details = () => {
     contact,
     likeCount,
   } = list;
-
+ 
   const [like, setLike] = useState(0);
   const [showContact, setShowContact] = useState(false);
 

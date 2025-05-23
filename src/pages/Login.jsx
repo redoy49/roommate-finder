@@ -18,7 +18,7 @@ const Login = () => {
   useEffect(() => {
     document.title = "Login";
   }, []);
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;

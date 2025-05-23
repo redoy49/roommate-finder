@@ -10,7 +10,8 @@ import MyLists from "../pages/MyLists";
 import AddLists from "../pages/AddLists";
 import CardDetails from "../pages/CardDetails";
 import PrivateRoute from "./PrivateRoute";
- 
+import UpdateList from "../pages/UpdateList";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,14 +46,16 @@ const router = createBrowserRouter([
         loader: () => fetch("http://localhost:3000/lists"),
         element: <BrowseLists />,
       },
-      // {
-      //   path: "/update/:id",
-      //   element: (
-      //     <PrivateRoute>
-      //       <UpdatePost />
-      //     </PrivateRoute> 
-      //   ),
-      // },
+      {
+        path: "/update/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/lists/${params.id}`),
+        element: (
+          <PrivateRoute>
+            <UpdateList />
+          </PrivateRoute>
+        ),
+      },
       {
         path: "/card-details/:id",
         loader: ({ params }) =>

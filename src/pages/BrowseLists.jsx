@@ -1,10 +1,10 @@
-// import { useEffect, useState } from "react";
+// import { useState } from "react";
 import { Link, useLoaderData } from "react-router";
 
 const BrowseLists = () => {
   const lists = useLoaderData();
 
-  // const [posts, setPosts] = useState([]);
+  // const [list, setList] = useState(lists);
   // const [loading, setLoading] = useState(true);
 
   // useEffect(() => {

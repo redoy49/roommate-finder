@@ -32,7 +32,7 @@ const Register = () => {
       toast.error("Password must be at least 6 digit.");
       return;
     }
-
+ 
     if (!/[A-Z]/.test(password)) {
       toast.error("Password must contain at least one uppercase letter.");
       return;

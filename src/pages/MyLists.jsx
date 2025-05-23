@@ -67,7 +67,7 @@ const MyLists = () => {
               <td>{list.rent}</td>
               <td>{list.roomType}</td>
               <td>
-                <Link to={`/card-details/${list._id}`}>
+                <Link to={`/update/${list._id}`}>
                   <MdUpdate className="cursor-pointer" size={20} />
                 </Link>
               </td>

@@ -32,7 +32,4 @@ Find potential roommates based on location, budget, lifestyle preferences, and o
 
 Tooltip
 Success Error Toast
-Update Page
-Delete List,
 Dark mode
-google login photo
