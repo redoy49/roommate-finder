@@ -5,32 +5,8 @@ const BrowseLists = () => {
   const lists = useLoaderData();
 
   useEffect(() => {
-      document.title = "Browse Lists";
-    }, []);
-
-  // const [list, setList] = useState(lists);
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   fetch("https://your-vercel-server.vercel.app/posts")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setPosts(data);
-  //       setLoading(false);
-  //     })
-  //     .catch((err) => {
-  //       console.error(err);
-  //       setLoading(false);
-  //     });
-  // }, []);
-
-  // if (loading) {
-  //   return (
-  //     <div className="text-center my-10">
-  //       <span className="loading loading-spinner text-primary"></span>
-  //     </div>
-  //   );
-  // }
+    document.title = "Browse Lists";
+  }, []);
 
   return (
     <div className="overflow-x-auto">

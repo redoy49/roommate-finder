@@ -21,7 +21,7 @@ const Details = () => {
     likeCount,
   } = list;
  
-  const [like, setLike] = useState(0);
+  const [like, setLike] = useState(likeCount || 0);
   const [showContact, setShowContact] = useState(false);
 
   const handleLike = () => {
@@ -35,7 +35,7 @@ const Details = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {
-          setLike((prev) => prev + 1);
+          setLike((count) => count + 1);
           setShowContact(true);
           toast.success("Liked successfully");
         }
@@ -47,7 +47,7 @@ const Details = () => {
     <div className="flex justify-center items-center md:my-14">
       <div className="card-body border border-slate-300 max-w-md text-base space-y-2">
         <h2 className="text-3xl font-bold mb-5 text-center">
-          {likeCount || 0} people interested in
+          {like} people interested in
         </h2>
         <h3 className="card-title font-bold">{title}</h3>
         <p>
