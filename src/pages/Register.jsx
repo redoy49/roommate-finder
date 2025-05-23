@@ -16,7 +16,7 @@ const Register = () => {
 
   const handleGoogleLogin = () => {
     googleLogin().then(() => {
-      toast.success("Login with Google successful!");
+      toast.success("Login with Google successful");
       navigate(`${location.state ? location.state : "/"}`);
     });
   };
@@ -54,15 +54,13 @@ const Register = () => {
         });
       })
 
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+      .catch(() => {
+        toast.error("User Register Failed");
       });
   };
 
   return (
-    <div className="flex items-center justify-center bg-pink-50 h-screen px-4 py-8">
+    <div className="flex items-center justify-center bg-pink-50 px-4 py-8">
       <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8">
         <h2 className="text-3xl font-bold text-center text-violet-700 mb-2">
           Create an account

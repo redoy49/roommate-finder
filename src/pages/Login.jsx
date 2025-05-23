@@ -7,7 +7,7 @@ import { AuthContext } from "../provider/AuthContext";
 
 const Login = () => {
   const { loginUser, googleLogin } = useContext(AuthContext);
-  
+
   console.log(googleLogin);
   const [email, setEmail] = useState("");
   const emailRef = useRef();
@@ -18,7 +18,7 @@ const Login = () => {
   useEffect(() => {
     document.title = "Login";
   }, []);
- 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -29,20 +29,15 @@ const Login = () => {
   };
 
   const handleGoogleLogin = () => {
-    googleLogin()
-      .then((result) => {
-        toast.success("Google Login successfull!");
-        navigate(`${location.state ? location.state : "/"}`);
-        console.log(result);
-      })
-  };
-
-  const handleForget = () => {
-    navigate("/forget-pass", { state: { email } });
+    googleLogin().then((result) => {
+      toast.success("Google Login successfull!");
+      navigate(`${location.state ? location.state : "/"}`);
+      console.log(result);
+    });
   };
 
   return (
-    <div className="flex items-center justify-center bg-pink-50 h-screen px-4 py-8">
+    <div className="flex items-center justify-center bg-pink-50 px-4 py-8">
       <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8">
         <h2 className="text-3xl font-bold text-center text-violet-700 mb-2">
           Login to your account
@@ -104,7 +99,6 @@ const Login = () => {
                 Password
               </label>
               <button
-                onClick={handleForget}
                 type="button"
                 className="text-xs text-violet-600 hover:underline"
               >
