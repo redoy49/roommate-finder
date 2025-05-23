@@ -30,7 +30,6 @@ Find potential roommates based on location, budget, lifestyle preferences, and o
 - `React` - for building user interfaces
 - `MongoDB` - stores data in JSON-like documents
 
-My Listing
 Tooltip
 Success Error Toast
 Update Page
