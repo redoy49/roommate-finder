@@ -9,6 +9,8 @@ const MyLists = () => {
   const [lists, setLists] = useState([]);
 
   useEffect(() => {
+    document.title = "My Lists";
+
     fetch(`http://localhost:3000/lists/email/${user.email}`)
       .then((res) => res.json())
       .then((data) => setLists(data));

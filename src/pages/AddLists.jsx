@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AuthContext } from "../provider/AuthContext";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 
 const AddLists = () => {
   const { user } = useContext(AuthContext);
+
+  useEffect(() => {
+    document.title = "Add Roommate";
+  }, []);
 
   const handleAddList = async (e) => {
     e.preventDefault();

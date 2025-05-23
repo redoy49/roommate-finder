@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "../components/Slider";
 import FAQ from "../components/FAQ";
 import { useLoaderData } from "react-router";
@@ -8,6 +8,10 @@ import Benifits from "../components/Benifits";
 const Home = () => {
   const lists = useLoaderData();
   console.log(lists);
+
+  useEffect(() => {
+      document.title = "Home";
+    }, []);
 
   return (
     <>

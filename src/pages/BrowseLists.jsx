@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { Link, useLoaderData } from "react-router";
 
 const BrowseLists = () => {
   const lists = useLoaderData();
+
+  useEffect(() => {
+      document.title = "Browse Lists";
+    }, []);
 
   // const [list, setList] = useState(lists);
   // const [loading, setLoading] = useState(true);

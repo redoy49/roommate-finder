@@ -1,10 +1,13 @@
 import { useLoaderData } from "react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
-import { AuthContext } from "../provider/AuthContext";
+// import { AuthContext } from "../provider/AuthContext";
  
 const Details = () => {
   const list = useLoaderData();
+  useEffect(() => {
+      document.title = "Card Details";
+    }, []);
   const {
     _id,
     title,
@@ -34,7 +37,7 @@ const Details = () => {
         if (data.modifiedCount > 0) {
           setLike((prev) => prev + 1);
           setShowContact(true);
-          toast.success("Liked successfully!");
+          toast.success("Liked successfully");
         }
       })
       .catch(() => toast.error("Failed to like the post."));

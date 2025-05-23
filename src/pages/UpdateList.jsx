@@ -1,10 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AuthContext } from "../provider/AuthContext";
 import { useLoaderData } from "react-router";
 import Swal from "sweetalert2";
 
 const UpdateList = () => {
   const list = useLoaderData();
+
+  useEffect(() => {
+    document.title = "Update Post";
+  }, []);
+
   const {
     _id,
     title,
