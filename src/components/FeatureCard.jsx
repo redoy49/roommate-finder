@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const FeatureCard = ({ list }) => {
-  const {_id, title, location, rent, roomType } = list;
+  const { _id, title, location, rent, roomType } = list;
   return (
     <div className="card border border-slate-300">
       <div className="card-body text-base">
@@ -27,5 +27,5 @@ const FeatureCard = ({ list }) => {
     </div>
   );
 };
- 
+
 export default FeatureCard;

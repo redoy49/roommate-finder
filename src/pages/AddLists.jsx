@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../provider/AuthContext";
+import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 const AddLists = () => {
   const { user } = useContext(AuthContext);
@@ -7,20 +9,6 @@ const AddLists = () => {
   const handleAddList = async (e) => {
     e.preventDefault();
     const form = e.target;
-
-    // const postData = {
-    //   title: form.title.value,
-    //   location: form.location.value,
-    //   rent: form.rent.value,
-    //   roomType: form.roomType.value,
-    //   lifestyle: form.lifestyle.value,
-    //   description: form.description.value,
-    //   contact: form.contact.value,
-    //   availability: form.availability.value,
-    //   userEmail: user.email,
-    //   userName: user.displayName,
-    // };
-    // console.log(postData);
 
     const formData = new FormData(form);
     const newLists = Object.fromEntries(formData.entries());
@@ -37,44 +25,18 @@ const AddLists = () => {
         console.log(data);
         if (data.insertedId) {
           console.log("Success:", data);
-          // Swal.fire({
-          //   title: "Coffee saved!",
-          //   icon: "success",
-          //   draggable: true,
-          // });
+          Swal.fire({
+            title: "Add Post Successfull.",
+            icon: "success",
+            draggable: true,
+          });
           form.reset();
         }
       })
-      .catch((err) => {
-        console.error("Error:", err);
-        alert("Failed to save coffee");
+      .catch(() => {
+        toast.error('Add Post Failed.');
       });
   };
-
-  // try {
-  //   setLoading(true);
-  //   const res = await fetch("https://your-vercel-server.vercel.app/posts", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(postData),
-  //   });
-
-  //   const data = await res.json();
-
-  //   if (data.insertedId) {
-  //     toast.success("Post added successfully!");
-  //     form.reset();
-  //   } else {
-  //     toast.error("Failed to add post.");
-  //   }
-  // } catch (err) {
-  //   toast.error(err.message);
-  // } finally {
-  //   setLoading(false);
-  // }
-  // };
 
   return (
     <div className="flex items-center justify-center bg-pink-50 px-4 py-8">

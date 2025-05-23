@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { NavLink, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthContext";
 import { Tooltip } from "react-tooltip";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -9,6 +10,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     logout().then(() => {
+      toast.success('User Logout Successfull.');
       navigate("/login");
     });
   };
@@ -31,7 +33,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 md:py-6">
+    <div className="navbar bg-slate-50 md:py-6">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

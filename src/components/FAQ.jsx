@@ -25,8 +25,8 @@ const FAQ = () => {
           2. Is The Roommate Finder Free to Use?
         </div>
         <div className="collapse-content text-sm">
-          Yes, completely free! The Roommate Finder lets you
-          search and message as much as you want without any limits.
+          Yes, completely free! The Roommate Finder lets you search and message
+          as much as you want without any limits.
         </div>
       </div>
 
@@ -72,11 +72,11 @@ const FAQ = () => {
       <div className="collapse collapse-plus bg-base-100 border border-base-300">
         <input type="radio" name="my-accordion-3" />
         <div className="collapse-title font-semibold">
-          5. What Websites To Find Roommates?
+          6. What Websites To Find Roommates?
         </div>
         <div className="collapse-content text-sm">
-          There are lots of places online to find roommates, but Roommate
-          is one of the fastest-growing, with over 400,000 students from 1,500+
+          There are lots of places online to find roommates, but Roommate is one
+          of the fastest-growing, with over 400,000 students from 1,500+
           colleges. It's a great place to start your search!
         </div>
       </div>
