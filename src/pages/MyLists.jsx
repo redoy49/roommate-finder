@@ -11,7 +11,9 @@ const MyLists = () => {
   useEffect(() => {
     document.title = "My Lists";
 
-    fetch(`http://localhost:3000/lists/email/${user.email}`)
+    fetch(
+      `https://roommate-finder-server-xi.vercel.app/lists/email/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setLists(data));
   }, []);
@@ -27,7 +29,7 @@ const MyLists = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/lists/${_id}`, {
+        fetch(`https://roommate-finder-server-xi.vercel.app/lists/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

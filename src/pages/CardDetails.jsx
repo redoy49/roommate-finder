@@ -33,7 +33,7 @@ const Details = () => {
       return;
     }
 
-    fetch(`http://localhost:3000/lists/${_id}/like`, {
+    fetch(`https://roommate-finder-server-xi.vercel.app/lists/${_id}/like`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

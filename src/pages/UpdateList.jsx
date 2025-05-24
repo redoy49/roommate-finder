@@ -21,7 +21,7 @@ const UpdateList = () => {
     const formData = new FormData(form);
     const newLists = Object.fromEntries(formData.entries());
 
-    fetch(`http://localhost:3000/lists/${_id}`, {
+    fetch(`https://roommate-finder-server-xi.vercel.app/lists/${_id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newLists),

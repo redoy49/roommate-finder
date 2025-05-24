@@ -18,7 +18,7 @@ const AddLists = () => {
     const newLists = Object.fromEntries(formData.entries());
     newLists.email = user.email;
 
-    fetch("http://localhost:3000/lists", {
+    fetch("https://roommate-finder-server-xi.vercel.app/lists", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newLists),
@@ -35,7 +35,7 @@ const AddLists = () => {
         }
       })
       .catch(() => {
-        toast.error('Add Post Failed.');
+        toast.error("Add Post Failed.");
       });
   };
 
