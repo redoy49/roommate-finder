@@ -4,8 +4,8 @@ import { Fade } from "react-awesome-reveal";
 
 const FeatureLists = ({ lists }) => {
   return (
-    <section className="my-24 p-2">
-      <h2 className="text-3xl font-bold text-center mb-12">
+    <section className="my-8 md:my-24 p-2">
+      <h2 className="text-xl md:text-3xl font-bold text-center mb-12">
         <Fade delay={1e3} cascade damping={1e-1}>
           Featured Roommates Section
         </Fade>

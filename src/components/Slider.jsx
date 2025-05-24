@@ -26,22 +26,22 @@ const Slider = () => {
         loop={true}
       >
         <SwiperSlide>
-          <div className="flex justify-center items-center h-[450px] bg-slate-100">
+          <div className="flex justify-center items-center max-h-[450px] bg-slate-100">
             <img className="w-full" src={slider11} alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex justify-center items-center h-[450px] bg-slate-100">
+          <div className="flex justify-center items-center max-h-[450px] bg-slate-100">
             <img className="w-full" src={slider10} alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex justify-center items-center h-[450px] bg-slate-100">
+          <div className="flex justify-center items-center max-h-[450px] bg-slate-100">
             <img className="w-full" src={slider9} alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex justify-center items-center h-[450px] bg-slate-100">
+          <div className="flex justify-center items-center max-h-[450px] bg-slate-100">
             <img className="w-full" src={slider12} alt="" />
           </div>
         </SwiperSlide>

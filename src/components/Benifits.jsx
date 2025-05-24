@@ -4,7 +4,7 @@ import { CiCircleCheck } from "react-icons/ci";
 
 const Benifits = () => {
   return (
-    <div className="my-24">
+    <div className="my-8 md:my-24">
       <div className="md:flex justify-center items-center gap-6">
         <div className="md:w-1/2">
           <img
@@ -14,28 +14,28 @@ const Benifits = () => {
           />
         </div>
         <div className="md:w-1/2 p-2 flex-1">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-xl md:text-3xl font-bold mb-6">
             Why use RoomMate?
           </h2>
-          <p className="text-slate-600 mb-6">
+          <p className="mb-6">
             Roommate is a one-stop destination for anyone looking out for
             roommates, flatmates, co-living spaces or PGs.
           </p>
-          <div className="text-slate-600 space-y-1 mb-6">
+          <div className="space-y-1 mb-6">
             <p className="flex items-center gap-1">
-              <CiCircleCheck className="text-black" size={18} />
+              <CiCircleCheck className="text-violet-400" size={18} />
               Efficient Matching Based on Preferences
             </p>
             <p className="flex items-center gap-1">
-              <CiCircleCheck className="text-black" size={18} />
+              <CiCircleCheck className="text-violet-400" size={18} />
               Verified Profiles and Safety Features
             </p>
             <p className="flex items-center gap-1">
-              <CiCircleCheck className="text-black" size={18} />
+              <CiCircleCheck className="text-violet-400" size={18} />
               Location-based search
             </p>
             <p className="flex items-center gap-1">
-              <CiCircleCheck className="text-black" size={18} />
+              <CiCircleCheck className="text-violet-400" size={18} />
               Saves time and effort
             </p>
           </div>

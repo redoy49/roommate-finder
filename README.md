@@ -30,5 +30,4 @@ Find potential roommates based on location, budget, lifestyle preferences, and o
 - `React` - for building user interfaces
 - `MongoDB` - stores data in JSON-like documents
 
-Dark mode
-browse listing
+dont like own post

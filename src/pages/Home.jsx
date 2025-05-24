@@ -4,6 +4,7 @@ import FAQ from "../components/FAQ";
 import { useLoaderData } from "react-router";
 import FeatureLists from "../components/FeatureCards";
 import Benifits from "../components/Benifits";
+import App from "../App";
 
 const Home = () => {
   const lists = useLoaderData();

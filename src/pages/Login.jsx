@@ -8,7 +8,6 @@ import { AuthContext } from "../provider/AuthContext";
 const Login = () => {
   const { loginUser, googleLogin } = useContext(AuthContext);
 
-  console.log(googleLogin);
   const [email, setEmail] = useState("");
   const emailRef = useRef();
   const [showPassword, setShowPassword] = useState(false);
@@ -37,7 +36,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center bg-pink-50 px-4 py-8">
+    <div className="flex items-center justify-center px-4 py-8">
       <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8">
         <h2 className="text-3xl font-bold text-center text-violet-700 mb-2">
           Login to your account

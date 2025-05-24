@@ -65,7 +65,7 @@ const AuthProvider = ({ children }) => {
         toast.error("Upate user info fail");
       });
   };
-
+ 
   const authData = {
     user,
     setUser,

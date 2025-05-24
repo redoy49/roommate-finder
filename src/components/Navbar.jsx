@@ -3,14 +3,41 @@ import { NavLink, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthContext";
 import { Tooltip } from "react-tooltip";
 import toast from "react-hot-toast";
+import { FaMoon, FaSun } from "react-icons/fa";
+import ThemeToggle from "../layouts/ThemeToggle";
 
 const Navbar = () => {
+  // const [theme, setTheme] = useState("light");
+
+  // useEffect(() => {
+  //   const savedTheme = localStorage.getItem("theme");
+  //   const systemPefersDark = window.matchMedia(
+  //     "(prefers-colors-scheme:dark)"
+  //   ).matches;
+
+  //   if (savedTheme) {
+  //     setTheme(savedTheme);
+  //   } else if (systemPefersDark) {
+  //     setTheme("dark");
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   const html = document.documentElement;
+  //   html.setAttribute("data-theme", theme);
+  //   localStorage.setItem("theme", theme);
+  // }, [theme]);
+
+  // const toggleTheme = () => {
+  //   setTheme(theme === "light" ? "dark" : "light");
+  // };
+
   const navigate = useNavigate();
   const { user, logout } = useContext(AuthContext);
 
   const handleLogout = () => {
     logout().then(() => {
-      toast.success('User Logout Successfull.');
+      toast.success("User Logout Successfull.");
       navigate("/login");
     });
   };
@@ -33,8 +60,16 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-slate-50 md:py-6">
+    <div className="navbar md:py-6">
       <div className="navbar-start">
+        <div className="flex flex-col items-center justify-center gap-4">
+          <ThemeToggle />
+        </div>
+        <button
+          data-toggle-theme="dark,light"
+          data-act-class="ACTIVECLASS"
+        ></button>
+
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -79,7 +114,7 @@ const Navbar = () => {
               content={user.displayName}
             />
             <button
-              className="btn bg-white text-base text-slate-600 md:px-6 md:py-5 rounded-full"
+              className="btn text-base md:px-6 md:py-5 rounded-full"
               onClick={handleLogout}
             >
               Logout
@@ -89,13 +124,13 @@ const Navbar = () => {
           <div className="flex gap-3 md:gap-6">
             <NavLink
               to="/login"
-              className="btn text-base bg-white text-slate-600 md:px-6 md:py-5 rounded-full"
+              className="btn text-base md:px-6 md:py-5 rounded-full"
             >
               Login
             </NavLink>
             <NavLink
               to="/register"
-              className="btn text-base bg-white text-slate-600 md:px-6 md:py-5 rounded-full"
+              className="btn text-base md:px-6 md:py-5 rounded-full"
             >
               Register
             </NavLink>
