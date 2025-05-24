@@ -1,7 +1,7 @@
 # Project Name : RoomMate
 RoomMate is a platform that helps individuals find compatible roommates based on location, budget, lifestyle preferences, and interests. Users can create profiles, search for roommates, and connect via chat.
 
-## Live Link : [Live URL](https://subscription-box-df504.web.app)
+## Live Link : [Live URL](https://roommate-finder-e1587.web.app)
 
 ## Purpose
 Find potential roommates based on location, budget, lifestyle preferences, and other filters. Communicate safely through protected user accounts and private listings. Ensure privacy and control by letting users update or delete their own posts.
@@ -29,6 +29,3 @@ Find potential roommates based on location, budget, lifestyle preferences, and o
 - `DaisyUI` - For Navbar , Footer
 - `React` - for building user interfaces
 - `MongoDB` - stores data in JSON-like documents
-
-live url update 
-mongodb 0.0.0.0
