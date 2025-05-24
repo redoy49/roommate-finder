@@ -13,7 +13,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="md:pl-20">
-            <h3 className="text-lg font-semibold mb-4">Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/terms">Terms and Conditions</a>
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-12 border-t border-slate-200 pt-6 text-center text-sm text-gray-500">
-          &copy; Roommate All rights reserved.
+          &copy; RoomMate All rights reserved.
         </div>
       </div>
     </footer>

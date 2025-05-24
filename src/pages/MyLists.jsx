@@ -17,7 +17,6 @@ const MyLists = () => {
   }, []);
 
   const handleDelete = (_id) => {
-    console.log(_id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -27,7 +26,6 @@ const MyLists = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
-      console.log(result.isConfirmed);
       if (result.isConfirmed) {
         fetch(`http://localhost:3000/lists/${_id}`, {
           method: "DELETE",
@@ -37,7 +35,6 @@ const MyLists = () => {
             if (data.deletedCount) {
               const newLists = lists.filter((list) => list._id !== _id);
               setLists(newLists);
-              console.log("After delete :", data);
               Swal.fire({
                 title: "Deleted!",
                 text: "Your file has been deleted.",

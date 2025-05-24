@@ -8,7 +8,6 @@ import App from "../App";
 
 const Home = () => {
   const lists = useLoaderData();
-  console.log(lists);
 
   useEffect(() => {
       document.title = "Home";

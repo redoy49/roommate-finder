@@ -17,7 +17,6 @@ const AddLists = () => {
     const formData = new FormData(form);
     const newLists = Object.fromEntries(formData.entries());
     newLists.email = user.email;
-    console.log(newLists);
 
     fetch("http://localhost:3000/lists", {
       method: "POST",
@@ -26,9 +25,7 @@ const AddLists = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
-          console.log("Success:", data);
           Swal.fire({
             title: "Add Post Successfull.",
             icon: "success",

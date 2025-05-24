@@ -3,35 +3,9 @@ import { NavLink, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthContext";
 import { Tooltip } from "react-tooltip";
 import toast from "react-hot-toast";
-import { FaMoon, FaSun } from "react-icons/fa";
 import ThemeToggle from "../layouts/ThemeToggle";
 
 const Navbar = () => {
-  // const [theme, setTheme] = useState("light");
-
-  // useEffect(() => {
-  //   const savedTheme = localStorage.getItem("theme");
-  //   const systemPefersDark = window.matchMedia(
-  //     "(prefers-colors-scheme:dark)"
-  //   ).matches;
-
-  //   if (savedTheme) {
-  //     setTheme(savedTheme);
-  //   } else if (systemPefersDark) {
-  //     setTheme("dark");
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   const html = document.documentElement;
-  //   html.setAttribute("data-theme", theme);
-  //   localStorage.setItem("theme", theme);
-  // }, [theme]);
-
-  // const toggleTheme = () => {
-  //   setTheme(theme === "light" ? "dark" : "light");
-  // };
-
   const navigate = useNavigate();
   const { user, logout } = useContext(AuthContext);
 

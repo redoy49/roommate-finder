@@ -6,23 +6,12 @@ import toast from "react-hot-toast";
 
 const UpdateList = () => {
   const list = useLoaderData();
-
   useEffect(() => {
     document.title = "Update Post";
   }, []);
 
-  const {
-    _id,
-    title,
-    location,
-    rent,
-    roomType,
-    lifestyle,
-    description,
-    availability,
-    contact,
-  } = list;
-  console.log(list);
+  const { _id } = list;
+
   const { user } = useContext(AuthContext);
 
   const handleUpdate = async (e) => {
@@ -40,7 +29,6 @@ const UpdateList = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {
-          console.log("Success:", data);
           Swal.fire({
             title: "Update Post Successfully.",
             icon: "success",
@@ -64,7 +52,6 @@ const UpdateList = () => {
           <input
             className="w-full px-4 py-3 border border-gray-300 rounded-sm"
             name="title"
-            defaultValue={title}
             type="text"
             placeholder="Title"
             required
@@ -72,7 +59,6 @@ const UpdateList = () => {
           <input
             className="w-full px-4 py-3 border border-gray-300 rounded-sm"
             name="location"
-            defaultValue={location}
             type="text"
             placeholder="Location"
             required
@@ -80,13 +66,11 @@ const UpdateList = () => {
           <input
             className="w-full px-4 h-12 border border-gray-300 rounded-sm"
             name="rent"
-            defaultValue={rent}
             type="number"
             placeholder="Rent Amount"
             required
           />
           <select
-            defaultValue={roomType}
             className="select w-full h-12 border border-gray-300 rounded-sm"
             name="roomType"
             required
@@ -98,7 +82,6 @@ const UpdateList = () => {
           <input
             className="w-full px-4 py-3 border border-gray-300 rounded-sm"
             name="lifestyle"
-            defaultValue={lifestyle}
             type="text"
             placeholder="Lifestyle Preferences"
             required
@@ -106,20 +89,17 @@ const UpdateList = () => {
           <textarea
             className="textarea w-full px-4 py-3 border border-gray-300 rounded-sm"
             name="description"
-            defaultValue={description}
             placeholder="Bio"
             required
           ></textarea>
           <input
             className="w-full px-4 py-3 border border-gray-300 rounded-sm"
             name="contact"
-            defaultValue={contact}
             type="text"
             placeholder="Contact Info"
             required
           />
           <select
-            defaultValue={availability}
             className="select w-full h-12 border border-gray-300 rounded-sm"
             name="availability"
             required

@@ -1,13 +1,15 @@
 import { useLoaderData } from "react-router";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
-// import { AuthContext } from "../provider/AuthContext";
- 
+import { AuthContext } from "../provider/AuthContext";
+
 const Details = () => {
   const list = useLoaderData();
+  const { user } = useContext(AuthContext);
+
   useEffect(() => {
-      document.title = "Card Details";
-    }, []);
+    document.title = "Card Details";
+  }, []);
   const {
     _id,
     title,
@@ -19,12 +21,18 @@ const Details = () => {
     availability,
     contact,
     likeCount,
+    email,
   } = list;
- 
+
   const [like, setLike] = useState(likeCount || 0);
   const [showContact, setShowContact] = useState(false);
 
   const handleLike = () => {
+    if (user?.email === email) {
+      toast.error("You cannot like your post.");
+      return;
+    }
+
     fetch(`http://localhost:3000/lists/${_id}/like`, {
       method: "PATCH",
       headers: {
