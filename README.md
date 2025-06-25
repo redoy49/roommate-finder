@@ -10,12 +10,6 @@ RoomMate is a full-stack web platform designed to help individuals find compatib
 
 ---
 
-## 🖼️ Screenshot
-
-![RoomMate Screenshot](https://i.ibb.co/sample-image.png) <!-- Replace with your actual screenshot URL -->
-
----
-
 ## 🎯 Project Purpose
 
 RoomMate was built to modernize and simplify the roommate-hunting experience through:
@@ -172,7 +166,6 @@ npm run dev
 ---
 
 ## 👤 Author
-
-🔗 Portfolio: [your-portfolio-link]  
+ 
 🐦 Twitter: [@mdredoyhasan49](https://twitter.com/mdredoyhasan49)  
-📧 Email: your@email.com
+📧 Email: mdredoyhasan49@gmail.com
