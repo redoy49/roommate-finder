@@ -150,8 +150,8 @@ npm run dev
 ## 🔗 Relevant Links
 
 - 🔴 Live Website: https://roommate-finder-e1587.web.app  
-- 🟠 Client GitHub Repo: https://github.com/redoy49/roommate-client  
-- 🟢 Server GitHub Repo: https://github.com/redoy49/roommate-server
+- 🟠 Client GitHub Repo: https://github.com/redoy49/roommate-finder  
+- 🟢 Server GitHub Repo: https://github.com/redoy49/roommate-finder-server
 
 ---
 
