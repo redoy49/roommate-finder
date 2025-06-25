@@ -74,7 +74,7 @@ RoomMate was built to modernize and simplify the roommate-hunting experience thr
 - `react-helmet`
 - `react-icons`
 - `react-tooltip`
-- `react-awesome-reveal` / `react-simple-typewriter` / `lottie-react` *(any two for animations)*
+- `react-awesome-reveal`
 
 ### Backend
 
