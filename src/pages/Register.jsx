@@ -61,14 +61,14 @@ const Register = () => {
   return (
     <div className="flex items-center justify-center pt-8 pb-12 sm:pt-12 sm:pb-16 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24">
       <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-violet-700 mb-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-secondary mb-2">
           Create an account
         </h2>
         <p className="text-sm sm:text-base md:text-[17px] text-center text-gray-600 mb-6">
           Already have an account?{" "}
           <NavLink
             to="/login"
-            className="text-violet-600 hover:underline font-medium"
+            className="text-secondary hover:underline font-medium"
           >
             Login here
           </NavLink>
@@ -160,7 +160,7 @@ const Register = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 text-sm sm:text-base"
+            className="w-full py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-secondary text-sm sm:text-base"
           >
             Register
           </button>

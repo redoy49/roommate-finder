@@ -137,13 +137,13 @@ const Navbar = () => {
               <>
                 <NavLink
                   to="/login"
-                  className="btn btn-accent text-sm md:text-base px-3 py-1.5 md:px-6 md:py-2 rounded-full"
+                  className="btn btn-secondary text-sm md:text-base px-3 py-1.5 md:px-6 md:py-2 rounded-full"
                 >
                   Login
                 </NavLink>
                 <NavLink
                   to="/register"
-                  className="btn btn-outline btn-accent text-sm md:text-base px-3 py-1.5 md:px-6 md:py-2 rounded-full"
+                  className="btn btn-outline btn-secondary text-sm md:text-base px-3 py-1.5 md:px-6 md:py-2 rounded-full"
                 >
                   Register
                 </NavLink>

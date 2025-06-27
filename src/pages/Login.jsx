@@ -38,14 +38,14 @@ const Login = () => {
   return (
       <div className="flex items-center justify-center pt-8 pb-12 sm:pt-12 sm:pb-16 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24">
         <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-violet-700 mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-secondary mb-2">
             Login to your account
           </h2>
           <p className="text-sm sm:text-base md:text-[17px] text-center text-gray-600 mb-6">
             Don’t have an account?{" "}
             <NavLink
               to="/register"
-              className="text-violet-600 hover:underline font-medium"
+              className="text-secondary hover:underline font-medium"
             >
               Register here
             </NavLink>
@@ -99,7 +99,7 @@ const Login = () => {
                 </label>
                 <button
                   type="button"
-                  className="text-xs sm:text-sm text-violet-600 hover:underline"
+                  className="text-xs sm:text-sm text-secondary hover:underline"
                 >
                   Forgot password?
                 </button>
@@ -126,7 +126,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-500 text-sm sm:text-base"
+              className="w-full py-3 btn btn-secondary h-12 text-white font-semibold rounded-lg text-sm sm:text-base"
             >
               Login
             </button>

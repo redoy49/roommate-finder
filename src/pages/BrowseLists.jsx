@@ -206,7 +206,7 @@ const BrowseLists = () => {
                     </p>
                   </div>
                   <div className="card-actions mt-4">
-                    <button className="btn btn-primary w-full flex items-center justify-center gap-2 text-white">
+                    <button className="btn btn-secondary w-full flex items-center justify-center gap-2 text-white">
                       View Details <ArrowRight className="h-5 w-5" />
                     </button>
                   </div>
