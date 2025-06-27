@@ -1,4 +1,8 @@
 import React, { useEffect } from "react";
+import client1 from '../assets/client1.jpg'
+import client2 from '../assets/client2.jpg'
+import client3 from '../assets/client3.jpg'
+import about from '../assets/about.png'
 import { FaUsers, FaLightbulb, FaHandsHelping, FaCheckCircle, FaStar } from "react-icons/fa"; // Importing icons for visual appeal
 
 const AboutUs = () => {
@@ -6,27 +10,26 @@ const AboutUs = () => {
     document.title = "About Us - Roommate Finder";
   }, []);
 
-  // Dummy data for team members and testimonials - replace with actual data from an API or CMS
   const teamMembers = [
     {
       id: 1,
       name: "Alice Johnson",
       role: "CEO & Co-founder",
-      image: "https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/short/linkedin-profile-picture-maker/dummy_image/thumb/001.webp", // Placeholder image
+      image: client1,
       bio: "Alice envisioned Roommate Finder to simplify co-living, bringing years of experience in tech startups and community building.",
     },
     {
       id: 2,
       name: "Bob Williams",
       role: "CTO & Co-founder",
-      image: "https://preview.redd.it/how-to-make-realistic-linkedin-profile-without-error-v0-g8j9vgl08kkb1.jpg?width=575&format=pjpg&auto=webp&s=657e434d58f57dd4fdd4a422cad5418f87bee9c5", // Placeholder image
+      image: client2,
       bio: "Bob leads our engineering efforts, passionate about creating robust and scalable solutions for seamless user experiences.",
     },
     {
       id: 3,
       name: "Carol Davis",
       role: "Head of Community",
-      image: "https://img.freepik.com/premium-photo/hr-hiring-human-resources-management-selective-new-career-recruitment-sites-unemployment-finding_820340-30712.jpg", // Placeholder image
+      image: client3,
       bio: "Carol ensures our community thrives, focusing on user support and fostering a positive environment for all members.",
     },
   ];
@@ -90,7 +93,7 @@ const AboutUs = () => {
           </div>
           <div className="animate-slide-in-right">
             <img
-              src="https://theceopublication.com/wp-content/uploads/2023/08/Promote-visionary-leadership-to-strengthen-the-organisation.png"
+              src={about}
               alt="Our Story"
               className="rounded-xl shadow-xl border border-base-300"
             />

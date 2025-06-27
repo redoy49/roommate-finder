@@ -5,30 +5,30 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import slider9 from "../assets/slider9.png";
-import slider10 from "../assets/slider10.png";
-import slider11 from "../assets/slider11.png";
-import slider12 from "../assets/slider12.png";
+import slider1 from "../assets/slider1.jpg";
+import slider2 from "../assets/slider2.jpg";
+import slider3 from "../assets/slider3.jpg";
+import slider4 from "../assets/slider4.avif";
 
 const Slider = () => {
   const slides = [
     {
-      image: slider11,
+      image: slider1,
       title: "Find Your Ideal Roommate Today",
       desc: "Explore the easiest way to connect and share your space with students like you.",
     },
     {
-      image: slider10,
+      image: slider2,
       title: "Smart Search. Better Matches.",
       desc: "Discover people who match your lifestyle and housing preferences.",
     },
     {
-      image: slider9,
+      image: slider3,
       title: "Live Together. Study Better.",
       desc: "Find roommates that support your goals, not distract from them.",
     },
     {
-      image: slider12,
+      image: slider4,
       title: "Safe. Verified. Trusted.",
       desc: "Over 400,000 students already use RoomMate. Join the community.",
     },
@@ -63,7 +63,7 @@ const Slider = () => {
 
               {/* ✅ Slide Content */}
               <div className="relative z-20 h-full flex flex-col justify-center items-center text-white text-center px-4 sm:px-6 lg:px-12">
-                <h2 className="text-sm sm:text-lg md:text-3xl lg:text-5xl font-bold mb-1 md:mb-2">
+                <h2 className="text-sm sm:text-lg md:text-3xl lg:text-5xl font-bold mb-1 md:mb-4">
                   {slide.title}
                 </h2>
                 <p className="text-xs sm:text-sm md:text-lg lg:text-xl max-w-2xl">

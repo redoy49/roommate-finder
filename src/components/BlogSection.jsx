@@ -1,4 +1,8 @@
 import React from "react";
+import blog1 from '../assets/blog1.jpg'
+import blog2 from '../assets/blog2.webp'
+import blog3 from '../assets/blog3.webp'
+import blog4 from '../assets/blog4.jpg'
 
 const blogs = [
   {
@@ -7,7 +11,7 @@ const blogs = [
     category: "Tips",
     date: "June 1, 2025",
     views: "2.1K views",
-    image: "https://source.unsplash.com/400x300/?roommate,1",
+    image: blog1,
   },
   {
     id: 2,
@@ -15,7 +19,7 @@ const blogs = [
     category: "Finance",
     date: "June 2, 2025",
     views: "2.2K views",
-    image: "https://source.unsplash.com/400x300/?finance,2",
+    image: blog2,
   },
   {
     id: 3,
@@ -23,7 +27,7 @@ const blogs = [
     category: "Lifestyle",
     date: "June 3, 2025",
     views: "2.3K views",
-    image: "https://source.unsplash.com/400x300/?apartment,3",
+    image: blog3,
   },
   {
     id: 4,
@@ -31,7 +35,7 @@ const blogs = [
     category: "Legal",
     date: "June 4, 2025",
     views: "2.4K views",
-    image: "https://source.unsplash.com/400x300/?contract,4",
+    image: blog4,
   },
 ];
 
@@ -40,7 +44,7 @@ const BlogSection = () => {
     <section className="py-12 bg-base-100 text-base-content">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center space-y-2">
-          <h2 className="text-3xl font-bold">Latest from Our Blog</h2>
+          <h2 className="text-3xl font-bold">Our Latest Blogs</h2>
           <p className="text-base text-base-content/70">
             Discover tips, ideas, and advice to make your roommate journey better.
           </p>

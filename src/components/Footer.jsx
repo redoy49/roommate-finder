@@ -13,7 +13,7 @@ const Footer = () => {
              <h3 className="text-lg md:text-xl font-semibold mb-4">RoomMate</h3>
             </a>
             <p className="text-sm md:text-base">
-              We room share to student save money. Join thousands who trust us.
+              A free roommate finder service to find roommates, rooms for rent, or apartment rentals for sharing based on your lifestyle & preferences.
             </p>
           </div>
 

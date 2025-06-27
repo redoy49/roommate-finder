@@ -1,5 +1,5 @@
 import React from "react";
-import benifits from "../assets/benifits.jpg";
+import team from "../assets/team.avif";
 import { CiCircleCheck } from "react-icons/ci";
 
 const Benifits = () => {
@@ -10,7 +10,7 @@ const Benifits = () => {
         <div className="md:w-1/2 mb-6 md:mb-0">
           <img
             className="w-full h-72 md:h-96 object-cover rounded-xl"
-            src={benifits}
+            src={team}
             alt="Benefits"
           />
         </div>
@@ -44,9 +44,11 @@ const Benifits = () => {
           </div>
 
           {/* Button */}
-          <button className="btn btn-secondary rounded-full px-6 h-11 text-sm md:text-base">
+          <a href="/browse-lists">
+            <button className="btn btn-secondary rounded-full px-6 h-11 text-sm md:text-base">
             Find Roommate
           </button>
+          </a>
         </div>
       </div>
     </div>
