@@ -153,11 +153,11 @@ const BrowseLists = () => {
           {filteredLists.map((list) => (
             <div
               key={list._id}
-              className="card bg-white shadow-sm hover:shadow-xl hover:scale-[1.01] transition-all duration-300 rounded-xl overflow-hidden flex flex-col border border-gray-200 relative"
+              className="card bg-base-100 shadow-sm hover:shadow-xl hover:scale-[1.01] transition-all duration-300 rounded-xl overflow-hidden flex flex-col border border-base-300 relative"
             >
               <button
                 onClick={() => handleFavoriteToggle(list._id)}
-                className="absolute top-3 right-3 p-2 bg-white rounded-full shadow z-10 text-gray-500 hover:text-red-500 transition"
+                className="absolute top-3 right-3 p-2 bg-base-100 rounded-full shadow z-10 text-base-content/70 hover:text-red-500 transition"
               >
                 {favoriteListings[list._id] ? (
                   <HeartCrack className="h-6 w-6 fill-red-500 text-red-500" />
@@ -166,7 +166,11 @@ const BrowseLists = () => {
                 )}
               </button>
 
-              <Link to={`/card-details/${list._id}`} className="block" aria-label={`View details for ${list.title}`}>
+              <Link
+                to={`/card-details/${list._id}`}
+                className="block"
+                aria-label={`View details for ${list.title}`}
+              >
                 <figure className="aspect-video w-full">
                   <img
                     src={list.image}
@@ -174,22 +178,23 @@ const BrowseLists = () => {
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = "https://placehold.co/600x400/E5E7EB/6B7280?text=No+Image";
+                      e.target.src =
+                        "https://placehold.co/600x400/E5E7EB/6B7280?text=No+Image";
                       e.target.alt = "No image available";
                     }}
                   />
                 </figure>
                 <div className="card-body p-4 flex flex-col justify-between">
                   <div>
-                    <h3 className="card-title text-xl font-semibold text-gray-800 mb-2">
+                    <h3 className="card-title text-xl font-semibold text-base-content mb-2">
                       {list.title}
                     </h3>
-                    <p className="text-sm text-gray-600 flex items-center mb-1">
-                      <MapPin className="h-4 w-4 mr-2 text-blue-500" />
+                    <p className="text-sm text-base-content/70 flex items-center mb-1">
+                      <MapPin className="h-4 w-4 mr-2 text-primary" />
                       {list.location}
                     </p>
-                    <p className="text-sm text-gray-600 flex items-center mt-1">
-                      <DollarSign className="h-4 w-4 mr-2 text-green-500" />
+                    <p className="text-sm text-base-content/70 flex items-center mt-1">
+                      <DollarSign className="h-4 w-4 mr-2 text-success" />
                       ${list.rent} / {list.roomType}
                     </p>
                   </div>

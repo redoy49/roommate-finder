@@ -5,6 +5,7 @@ import { useLoaderData } from "react-router";
 import FeatureLists from "../components/FeatureCards";
 import Benifits from "../components/Benifits";
 import NewsLetter from "../components/NewsLetter";
+import BlogSection from "../components/BlogSection";
 
 const Home = () => {
   const lists = useLoaderData();
@@ -19,6 +20,7 @@ const Home = () => {
       <Slider></Slider>
       <FeatureLists lists={lists}></FeatureLists>
       <Benifits></Benifits>
+      <BlogSection/>
       <FAQ></FAQ>
       <NewsLetter/>
     </>

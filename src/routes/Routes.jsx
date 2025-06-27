@@ -14,6 +14,7 @@ import PrivateRoute from "./PrivateRoute";
 import DashboardLayout from "../layouts/DashboardLayout";
 import DashboardWelcome from "../pages/DashboardWelcome";
 import UpdateList from "../pages/UpdateList";
+import AboutUs from "../pages/About";
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
         element: <CardDetails />,
       },
       { path: "/contact", element: <ContactUs /> },
-      // { path: "/blog", element: <Blog /> },
+      { path: "/about", element: <AboutUs /> },
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
     ],
