@@ -66,6 +66,12 @@ const DashboardLayout = () => {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/browse-lists" className="flex items-center gap-2">
+                <FiList className="text-lg" />
+                Browse Lists
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/dashboard/my-lists" className="flex items-center gap-2">
                 <FiList className="text-lg" />
                 My Lists
