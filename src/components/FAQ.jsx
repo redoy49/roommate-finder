@@ -41,7 +41,7 @@ const FAQ = () => {
       </h2>
 
       {/* Professional subheading */}
-      <p className="text-center text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+      <p className="text-center text-base md:text-lg max-w-2xl mx-auto mb-6">
         Here you'll find answers to the most common questions about using RoomMate designed to help you get the best experience.
       </p>
 

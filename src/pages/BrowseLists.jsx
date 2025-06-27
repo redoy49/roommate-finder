@@ -85,7 +85,9 @@ const BrowseLists = () => {
             <XCircle className="h-6 w-6 mr-2" /> Error Loading Listings
           </strong>
           <span>{error.message || "Something went wrong."}</span>
-          <p className="mt-2 text-sm">Try refreshing the page or check your internet connection.</p>
+          <p className="mt-2 text-sm">
+            Try refreshing the page or check your internet connection.
+          </p>
         </div>
       </div>
     );
@@ -93,13 +95,14 @@ const BrowseLists = () => {
 
   return (
     <div className="px-4 py-10 max-w-7xl mx-auto">
-      <h2 className="text-4xl font-bold text-center text-gray-800 mb-10">
+      <h2 className="text-4xl font-bold text-center mb-10">
         Discover Your Perfect Roommate Match
       </h2>
 
       <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4 mb-8">
+        {/* Sort By */}
         <div className="w-full sm:w-auto flex flex-col sm:flex-row items-start sm:items-center gap-2">
-          <label htmlFor="sort-by" className="text-gray-700 font-medium">
+          <label htmlFor="sort-by" className="font-medium text-base-content">
             Sort by:
           </label>
           <div className="relative w-full sm:w-56">
@@ -107,7 +110,7 @@ const BrowseLists = () => {
               id="sort-by"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="block w-full bg-white border border-gray-300 rounded-md py-2 pl-3 pr-8 shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              className="select select-bordered w-full"
             >
               <option value="default">Default</option>
               <option value="rentAsc">Rent: Low to High</option>
@@ -115,12 +118,15 @@ const BrowseLists = () => {
               <option value="titleAsc">Title: A-Z</option>
               <option value="titleDesc">Title: Z-A</option>
             </select>
-            <ChevronDown className="absolute right-2 top-2.5 h-4 w-4 text-gray-500 pointer-events-none" />
           </div>
         </div>
 
+        {/* Availability */}
         <div className="w-full sm:w-auto flex flex-col sm:flex-row items-start sm:items-center gap-2">
-          <label htmlFor="filter-availability" className="text-gray-700 font-medium">
+          <label
+            htmlFor="filter-availability"
+            className="font-medium text-base-content"
+          >
             Availability:
           </label>
           <div className="relative w-full sm:w-56">
@@ -128,13 +134,12 @@ const BrowseLists = () => {
               id="filter-availability"
               value={filterAvailability}
               onChange={(e) => setFilterAvailability(e.target.value)}
-              className="block w-full bg-white border border-gray-300 rounded-md py-2 pl-3 pr-8 shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              className="select select-bordered w-full"
             >
               <option value="all">All</option>
               <option value="available">Available</option>
               <option value="notAvailable">Not Available</option>
             </select>
-            <ChevronDown className="absolute right-2 top-2.5 h-4 w-4 text-gray-500 pointer-events-none" />
           </div>
         </div>
       </div>
@@ -146,7 +151,9 @@ const BrowseLists = () => {
         </div>
       ) : filteredLists.length === 0 ? (
         <div className="text-center py-10">
-          <p className="text-xl text-gray-600">No listings found matching your criteria.</p>
+          <p className="text-xl text-gray-600">
+            No listings found matching your criteria.
+          </p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -190,12 +197,12 @@ const BrowseLists = () => {
                       {list.title}
                     </h3>
                     <p className="text-sm text-base-content/70 flex items-center mb-1">
-                      <MapPin className="h-4 w-4 mr-2 text-primary" />
+                      <MapPin className="h-4 w-4 mr-2 text-secondary" />
                       {list.location}
                     </p>
                     <p className="text-sm text-base-content/70 flex items-center mt-1">
-                      <DollarSign className="h-4 w-4 mr-2 text-success" />
-                      ${list.rent} / {list.roomType}
+                      <DollarSign className="h-4 w-4 mr-2 text-success" />$
+                      {list.rent} / {list.roomType}
                     </p>
                   </div>
                   <div className="card-actions mt-4">

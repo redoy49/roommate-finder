@@ -66,7 +66,7 @@ const AboutUs = () => {
           At Roommate Finder, we're dedicated to transforming how people find roommates and homes. Our mission is to connect individuals with compatible living partners, fostering harmonious and secure environments.
         </p>
         <div className="flex justify-center space-x-4">
-          <a href="/browse-lists" className="btn btn-primary btn-lg shadow-lg transform transition duration-300 hover:scale-105">
+          <a href="/browse-lists" className="btn btn-secondary btn-lg shadow-lg transform transition duration-300 hover:scale-105">
             Browse All Lists
           </a>
           <a href="/" className="btn btn-outline btn-lg shadow-lg transform transition duration-300 hover:scale-105">
@@ -82,7 +82,7 @@ const AboutUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <FaLightbulb className="inline-block mr-3 text-primary" /> Our Story
+              <FaLightbulb className="inline-block mr-3 text-secondary" /> Our Story
             </h2>
             <p className="text-lg leading-relaxed mb-4">
               Roommate Finder began with a simple idea: finding the right roommate shouldn't be stressful. Our founders, having faced their own challenges in the search, envisioned a platform that prioritized compatibility, safety, and community.
@@ -110,7 +110,7 @@ const AboutUs = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-base-100 p-8 rounded-xl shadow-lg border border-base-300 transform transition duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in-up">
-            <div className="text-5xl text-primary mb-4 text-center">
+            <div className="text-5xl text-secondary mb-4 text-center">
               <FaUsers />
             </div>
             <h3 className="text-2xl font-semibold mb-3 text-center">Our Mission</h3>
@@ -120,7 +120,7 @@ const AboutUs = () => {
           </div>
           <div className="bg-base-100 p-8 rounded-xl shadow-lg border border-base-300 transform transition duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in-up delay-100">
             <div className="text-5xl text-accent mb-4 text-center">
-              <FaCheckCircle />
+              <FaCheckCircle className="text-secondary" />
             </div>
             <h3 className="text-2xl font-semibold mb-3 text-center">Our Values</h3>
             <ul className="list-none space-y-2 text-base-content/80 text-center">
@@ -150,7 +150,7 @@ const AboutUs = () => {
       {/* Meet the Team Section */}
       <section className="max-w-6xl mx-auto mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          <FaUsers className="inline-block mr-3 text-primary" /> Meet Our Visionary Team
+          <FaUsers className="inline-block mr-3 text-secondary" /> Meet Our Visionary Team
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {teamMembers.map((member) => (
@@ -161,10 +161,10 @@ const AboutUs = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-primary"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-secondary"
               />
               <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-              <p className="text-primary-focus mb-3">{member.role}</p>
+              <p className="text-secondary-focus mb-3">{member.role}</p>
               <p className="text-base-content/70 text-sm leading-relaxed">
                 {member.bio}
               </p>

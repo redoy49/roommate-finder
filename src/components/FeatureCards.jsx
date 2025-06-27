@@ -5,7 +5,7 @@ const FeatureGrid = ({ lists }) => {
 
   return (
     <div className="px-4 py-10 max-w-7xl mx-auto">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+      <h2 className="text-3xl font-bold text-center mb-8">
         Featured Roommate Listings
       </h2>
 

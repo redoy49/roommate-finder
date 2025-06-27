@@ -62,7 +62,7 @@ const Details = () => {
   return (
     <div className="w-full px-4 py-16">
       <div className="max-w-4xl mx-auto text-center mb-8 px-2">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary">
+        <h2 className="text-3xl md:text-4xl font-bold">
           Roommate Listing Details
         </h2>
         <p className="text-base-content/70 mt-2 text-base md:text-lg max-w-2xl mx-auto">

@@ -66,7 +66,7 @@ const NewsLetter = () => {
 
           {/* Right Section: Form */}
           <div className="lg:w-1/2 lg:pl-8">
-            <div className="bg-secondary/10 p-6 sm:p-8 rounded-xl border border-secondary/20 shadow-inner">
+            <div className="bg-secondary/8 p-6 sm:p-8 rounded-xl border border-secondary/20 shadow-inner">
               <h3 className="text-2xl font-bold text-secondary mb-5 text-center">
                 Join Our Newsletter
               </h3>

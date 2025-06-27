@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <a href='/'>
-             <h3 className="text-lg md:text-xl font-semibold mb-4">RoomMate</h3>
+             <h3 className="text-lg text-secondary md:text-xl font-bold mb-4">RoomMate</h3>
             </a>
             <p className="text-sm md:text-base">
               A free roommate finder service to find roommates, rooms for rent, or apartment rentals for sharing based on your lifestyle & preferences.
