@@ -55,7 +55,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="sticky top-0 z-50 bg-base-100 text-base-content shadow">
+    <div className="sticky top-0 z-50 bg-base-200 text-base-content">
       <div className="navbar max-w-screen-xl mx-auto px-4 py-3 md:py-6">
         <div className="navbar-start">
           {/* Removed ThemeToggle from here */}

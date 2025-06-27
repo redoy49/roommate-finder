@@ -103,12 +103,22 @@ const AddLists = () => {
             <option value="Available">Available</option>
             <option value="Not Available">Not Available</option>
           </select>
+
+          {/* ✅ New input for image URL */}
+          <input
+            className="input input-bordered w-full"
+            name="image"
+            type="text"
+            placeholder="Image URL (optional)"
+          />
+
           <textarea
             className="textarea textarea-bordered w-full col-span-full"
             name="description"
             placeholder="Bio"
             required
           ></textarea>
+
           <input
             className="input input-bordered w-full"
             type="text"
