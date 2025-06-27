@@ -1,17 +1,22 @@
 import React from "react";
 import { Outlet } from "react-router";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 const MainLayout = () => {
   return (
-    <div className="max-w-7xl mx-auto">
-      <Header></Header>
-      <main className="min-h-[calc(100vh-350px)]">
-        <Outlet></Outlet>
+    <>
+      {/* ✅ Full width Navbar */}
+      <Navbar />
+
+      {/* ✅ Main content centered */}
+      <main className="max-w-7xl mx-auto min-h-[calc(100vh-350px)] px-4">
+        <Outlet />
       </main>
-      <Footer></Footer>
-    </div>
+
+      {/* ✅ Full width Footer */}
+      <Footer />
+    </>
   );
 };
 

@@ -11,8 +11,31 @@ import slider11 from "../assets/slider11.png";
 import slider12 from "../assets/slider12.png";
 
 const Slider = () => {
+  const slides = [
+    {
+      image: slider11,
+      title: "Find Your Ideal Roommate Today",
+      desc: "Explore the easiest way to connect and share your space with students like you.",
+    },
+    {
+      image: slider10,
+      title: "Smart Search. Better Matches.",
+      desc: "Discover people who match your lifestyle and housing preferences.",
+    },
+    {
+      image: slider9,
+      title: "Live Together. Study Better.",
+      desc: "Find roommates that support your goals, not distract from them.",
+    },
+    {
+      image: slider12,
+      title: "Safe. Verified. Trusted.",
+      desc: "Over 400,000 students already use RoomMate. Join the community.",
+    },
+  ];
+
   return (
-    <div>
+    <div className="w-full">
       <Swiper
         autoplay={{
           delay: 3000,
@@ -21,30 +44,35 @@ const Slider = () => {
         modules={[Autoplay, Navigation, Pagination, A11y]}
         spaceBetween={50}
         slidesPerView={1}
-        navigation
         pagination={{ clickable: true }}
         loop={true}
       >
-        <SwiperSlide>
-          <div className="flex justify-center items-center max-h-[450px] bg-slate-100">
-            <img className="w-full" src={slider11} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex justify-center items-center max-h-[450px] bg-slate-100">
-            <img className="w-full" src={slider10} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex justify-center items-center max-h-[450px] bg-slate-100">
-            <img className="w-full" src={slider9} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex justify-center items-center max-h-[450px] bg-slate-100">
-            <img className="w-full" src={slider12} alt="" />
-          </div>
-        </SwiperSlide>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative w-full h-[180px] md:h-[50vh]">
+              {/* ✅ Background Image Container */}
+              <div className="absolute inset-0">
+                <img
+                  src={slide.image}
+                  alt="Slide"
+                  className="w-full h-full object-cover"
+                />
+                {/* ✅ Overlay */}
+                <div className="absolute inset-0 bg-black/40"></div>
+              </div>
+
+              {/* ✅ Slide Content */}
+              <div className="relative z-20 h-full flex flex-col justify-center items-center text-white text-center px-4 sm:px-6 lg:px-12">
+                <h2 className="text-sm sm:text-lg md:text-3xl lg:text-5xl font-bold mb-1 md:mb-2">
+                  {slide.title}
+                </h2>
+                <p className="text-xs sm:text-sm md:text-lg lg:text-xl max-w-2xl">
+                  {slide.desc}
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

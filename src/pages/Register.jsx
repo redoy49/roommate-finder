@@ -53,19 +53,18 @@ const Register = () => {
           navigate(`${location.state ? location.state : "/"}`);
         });
       })
-
       .catch(() => {
         toast.error("User Register Failed");
       });
   };
 
   return (
-    <div className="flex items-center justify-center px-4 py-8">
+    <div className="flex items-center justify-center pt-8 pb-12 sm:pt-12 sm:pb-16 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24">
       <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8">
-        <h2 className="text-3xl font-bold text-center text-violet-700 mb-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-violet-700 mb-2">
           Create an account
         </h2>
-        <p className="text-sm text-center text-gray-600 mb-6">
+        <p className="text-sm sm:text-base md:text-[17px] text-center text-gray-600 mb-6">
           Already have an account?{" "}
           <NavLink
             to="/login"
@@ -76,97 +75,107 @@ const Register = () => {
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="space-y-2">
-            <label
-              htmlFor="fullname"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Full Name
-            </label>
-            <input
-              type="text"
-              name="fullname"
-              id="fullname"
-              required
-              placeholder="Your name"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Email Address
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              required
-              placeholder="Your email"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <label
-              htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Password
-            </label>
-            <div className="flex items-center relative">
-              <input
-                type={showPassword ? "text" : "password"}
-                name="password"
-                id="password"
-                required
-                placeholder="******"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50"
-              />
-
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                className="btn btn-xs absolute right-4"
+          {/* Name + Photo */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <label
+                htmlFor="fullname"
+                className="block text-sm sm:text-base font-medium text-gray-700"
               >
-                {showPassword ? <FaEye size={16} /> : <FaEyeSlash size={16} />}
-              </button>
+                Full Name
+              </label>
+              <input
+                type="text"
+                name="fullname"
+                id="fullname"
+                required
+                placeholder="Your name"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-sm sm:text-base"
+              />
+            </div>
+            <div className="space-y-2">
+              <label
+                htmlFor="photourl"
+                className="block text-sm sm:text-base font-medium text-gray-700"
+              >
+                Photo URL
+              </label>
+              <input
+                type="text"
+                name="photourl"
+                id="photourl"
+                required
+                placeholder="Photo URL"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-sm sm:text-base"
+              />
             </div>
           </div>
 
-          <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
-              Photo URL
-            </label>
-            <input
-              type="text"
-              name="photourl"
-              id="photourl"
-              required
-              placeholder="Photo URL"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50"
-            />
+          {/* Email + Password */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <label
+                htmlFor="email"
+                className="block text-sm sm:text-base font-medium text-gray-700"
+              >
+                Email Address
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="Your email"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-sm sm:text-base"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label
+                htmlFor="password"
+                className="block text-sm sm:text-base font-medium text-gray-700"
+              >
+                Password
+              </label>
+              <div className="flex items-center relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  id="password"
+                  required
+                  placeholder="******"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-sm sm:text-base"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="btn btn-xs absolute right-4"
+                >
+                  {showPassword ? <FaEye size={16} /> : <FaEyeSlash size={16} />}
+                </button>
+              </div>
+            </div>
           </div>
 
+          {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700"
+            className="w-full py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 text-sm sm:text-base"
           >
             Register
           </button>
         </form>
+
         <div className="flex items-center w-full my-4">
           <hr className="w-full border-gray-300" />
-          <span className="px-3 text-gray-500 text-sm">OR</span>
+          <span className="px-3 text-gray-500 text-sm sm:text-base">OR</span>
           <hr className="w-full border-gray-300" />
         </div>
+
         <button
           onClick={handleGoogleLogin}
           type="button"
-          className="flex items-center justify-center w-full gap-3 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50"
+          className="flex items-center justify-center w-full gap-3 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 text-sm sm:text-base"
         >
           <FcGoogle size={23} />
           <span>Login with Google</span>

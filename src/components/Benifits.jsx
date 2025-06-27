@@ -4,42 +4,47 @@ import { CiCircleCheck } from "react-icons/ci";
 
 const Benifits = () => {
   return (
-    <div className="my-8 md:my-24">
-      <div className="md:flex justify-center items-center gap-6">
-        <div className="md:w-1/2">
+    <div className="py-8 md:py-16 px-4">
+      <div className="max-w-screen-xl mx-auto md:flex justify-center items-center gap-10">
+        {/* Image Section */}
+        <div className="md:w-1/2 mb-6 md:mb-0">
           <img
-            className="w-full h-96 object-cover p-2 rounded-xl"
+            className="w-full h-72 md:h-96 object-cover rounded-xl"
             src={benifits}
-            alt=""
+            alt="Benefits"
           />
         </div>
-        <div className="md:w-1/2 p-2 flex-1">
-          <h2 className="text-xl md:text-3xl font-bold mb-6">
+
+        {/* Content Section */}
+        <div className="md:w-1/2 space-y-5 text-base-content">
+          <h2 className="text-xl md:text-3xl font-bold">
             Why use RoomMate?
           </h2>
-          <p className="mb-6">
-            Roommate is a one-stop destination for anyone looking out for
-            roommates, flatmates, co-living spaces or PGs.
+          <p className="text-sm md:text-base">
+            RoomMate is a one-stop destination for anyone looking for roommates,
+            flatmates, co-living spaces, or PGs.
           </p>
-          <div className="space-y-1 mb-6">
-            <p className="flex items-center gap-1">
-              <CiCircleCheck className="text-violet-400" size={18} />
+          <div className="space-y-2 text-sm md:text-base">
+            <p className="flex items-center gap-2">
+              <CiCircleCheck className="text-secondary" size={20} />
               Efficient Matching Based on Preferences
             </p>
-            <p className="flex items-center gap-1">
-              <CiCircleCheck className="text-violet-400" size={18} />
+            <p className="flex items-center gap-2">
+              <CiCircleCheck className="text-secondary" size={20} />
               Verified Profiles and Safety Features
             </p>
-            <p className="flex items-center gap-1">
-              <CiCircleCheck className="text-violet-400" size={18} />
+            <p className="flex items-center gap-2">
+              <CiCircleCheck className="text-secondary" size={20} />
               Location-based search
             </p>
-            <p className="flex items-center gap-1">
-              <CiCircleCheck className="text-violet-400" size={18} />
+            <p className="flex items-center gap-2">
+              <CiCircleCheck className="text-secondary" size={20} />
               Saves time and effort
             </p>
           </div>
-          <button className="btn rounded-full bg-violet-600 h-12 px-6 text-white">
+
+          {/* Button */}
+          <button className="btn btn-secondary rounded-full px-6 h-11 text-sm md:text-base">
             Find Roommate
           </button>
         </div>

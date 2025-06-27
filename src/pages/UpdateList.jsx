@@ -11,13 +11,11 @@ const UpdateList = () => {
   }, []);
 
   const { _id } = list;
-
   const { user } = useContext(AuthContext);
 
   const handleUpdate = async (e) => {
     e.preventDefault();
     const form = e.target;
-
     const formData = new FormData(form);
     const newLists = Object.fromEntries(formData.entries());
 
@@ -43,86 +41,98 @@ const UpdateList = () => {
   };
 
   return (
-    <div className="flex items-center justify-center bg-pink-50 px-4 py-8">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8">
-        <h2 className="text-2xl text-center text-violet-500 font-bold mb-5">
+    <div className="w-full min-h-screen p-4 md:p-8 flex justify-center items-start bg-base-100 text-base-content">
+      <div className="w-full max-w-4xl bg-base-200 rounded-xl shadow-xl p-8">
+        <h2 className="text-2xl text-center font-bold mb-5 text-secondary">
           Update Post Details
         </h2>
-        <form onSubmit={handleUpdate} className="grid gap-4">
+
+        <form onSubmit={handleUpdate} className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <input
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm"
+            className="input input-bordered w-full"
             name="title"
             type="text"
             placeholder="Title"
             required
+            defaultValue={list?.title}
           />
           <input
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm"
+            className="input input-bordered w-full"
             name="location"
             type="text"
             placeholder="Location"
             required
+            defaultValue={list?.location}
           />
           <input
-            className="w-full px-4 h-12 border border-gray-300 rounded-sm"
+            className="input input-bordered w-full"
             name="rent"
             type="number"
             placeholder="Rent Amount"
             required
+            defaultValue={list?.rent}
           />
           <select
-            className="select w-full h-12 border border-gray-300 rounded-sm"
+            className="select select-bordered w-full"
             name="roomType"
             required
+            defaultValue={list?.roomType}
           >
-            <option disabled={true}>Select Room Type</option>
+            <option disabled>Select Room Type</option>
             <option>Single</option>
             <option>Shared</option>
           </select>
           <input
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm"
+            className="input input-bordered w-full"
             name="lifestyle"
             type="text"
             placeholder="Lifestyle Preferences"
             required
+            defaultValue={list?.lifestyle}
           />
-          <textarea
-            className="textarea w-full px-4 py-3 border border-gray-300 rounded-sm"
-            name="description"
-            placeholder="Bio"
-            required
-          ></textarea>
           <input
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm"
+            className="input input-bordered w-full"
             name="contact"
             type="text"
             placeholder="Contact Info"
             required
+            defaultValue={list?.contact}
           />
           <select
-            className="select w-full h-12 border border-gray-300 rounded-sm"
+            className="select select-bordered w-full"
             name="availability"
             required
+            defaultValue={list?.availability}
           >
-            <option disabled={true}>Select Availabililty</option>
+            <option disabled>Select Availability</option>
             <option value="Available">Available</option>
             <option value="Not Available">Not Available</option>
           </select>
+
+          <textarea
+            className="textarea textarea-bordered w-full col-span-full"
+            name="description"
+            placeholder="Bio"
+            required
+            defaultValue={list?.description}
+          ></textarea>
+
           <input
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm"
+            className="input input-bordered w-full"
             type="text"
             defaultValue={user.displayName}
             disabled
           />
           <input
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm"
+            className="input input-bordered w-full"
             type="text"
             defaultValue={user.email}
             disabled
           />
+
           <button
             type="submit"
-            className="w-full py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-500"
+            className="btn btn-secondary w-full col-span-full"
           >
             Update Post
           </button>
